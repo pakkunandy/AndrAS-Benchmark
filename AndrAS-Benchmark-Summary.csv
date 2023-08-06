@@ -1,0 +1,27 @@
+﻿AppName,APIs/Components,Artifact Type,Description,Located Activity/Class,Intended Size of AS,Detected,Note
+HttpURLConnection,HttpURLConnection,Web Connection,MainActivityhas a FetchContentTask class that performs web connection by using the HttpURLConnection API. The connection is automatically started when the MainActivity is created.,MainActivity,3,3,
+HttpsURLConnection,HttpsURLConnection,Web Connection,MainActivityhas a FetchContentTask class that performs web connection by using the HttpsURLConnection API. The connection is started when the button is clicked.,MainActivity,3,3,
+Retrofit,Retrofit,Web Connection,"MainActivitycalls another Activity, RetrofitCallActivity. RetrofitCallActivityperforms web connection by using the Retrofit API when it is created.",RetrofitCallActivity,3,5,Because of TPL
+Volley,Volley,Web Connection,"MainActivitycalls another Activity, VolleyCallActivity. When VolleyCallActivityis created, VolleyCallActivitycalls VolleyHelper's function (in a separate file) to open a web connection using Volley API.",VolleyHelper,3,3,
+DefaultHttpClient,DefaultHttpClient,Web Connection,"MainActivitycalls another Activity, DefaultHttpClientCallingActivity. DefaultHttpClientCallingActivityperforms web connection using DefaultHttpClient API when it is created.",DefaultHttpClientCallingActivity,3,3,Deprecated
+OkHttpClient,OkHttpClient,Web Connection,"MainActivitycalls another Activity, ConnectionActivity is in another package. ConnectionActivity performs a web connection using OkHttpClient API when it is created.",ConnectionActivity,3,11,Because of TPL
+SharedPreferences,SharedPreferences,Data Storage,MainActivitystores input data to the SharedPreference and loads back the data into the text view.,MainActivity,3,3,
+SQLite,SQLiteDatabase,Data Storage,MainActivitystores input data to the SQLiteDatabase and loads back the data into the text view using the DatabaseHelper class.,DatabaseHelper,3,3,
+RealmDatabase,RealmDatabase,Data Storage,MainActivitystores data to the Realm and loads back the data into the text view in the DisplayActivity using Realm API. The RealmConfiguration is in the MyApplication file.,"MainActivity
+DisplayActivity 
+MyApplication ",7,11,
+InternalStorage,Internal Storage,Data Storage,MainActivitystores input data to the InternalStorage and loads back the data into the text view. A CacheStoringActivity stores input data to the InternalStorage with CacheDir API.,"MainActivity , CacheStoringActivity ",5,5,
+ExternalStorage,External Storage,Data Storage,MainActivitystores input data to the ExternalStorage and load back the data into the text view.,MainActivity,3,3,
+KeyStore,Key Store,Data Storage,"MainActivity uses KeyStoreHelper , which uses KeyStore API, to load the key for encryption and decryption.",KeyStoreHelper,3,3,
+Bluetooth,Bluetooth,Sensitive Connection,MainActivity establishes a connection using Bluetooth API.,MainActivity,3,3,
+NFC,NFC,Sensitive Connection,MainActivity establishes a connection using NFC API.,MainActivity,3,3,
+Socket,Socket,Sensitive Connection,MainActivity establishes a connection using Socket API.,MainActivity,5,5,
+SSLSocket,SSLSocket,Sensitive Connection,MainActivity establishes a connection using SSLSocket API.,MainActivity,5,7,
+SMS,Sms,Personal Data Access,MainActivitysend a message to a recipient by using SmsManager. The SmsReceiver receives the SMS by using SmsMessage.,MainActivity SmsReceiver,4,6,
+Camera,Camera,Personal Data Access,MainActivityopens a Camera and take a picture,MainActivity,3,3,
+Contacts,Contacts,Personal Data Access,"MainActivityaccesses the user’s Contacts ",MainActivity,3,3,
+Calendar,Calendar,Personal Data Access,MainActivityaccesses the user’s Calendar,MainActivity,3,3,
+Location,Location,Personal Data Access,MainActivityaccesses the user’s Location and displays the latitude and longitude,MainActivity,2,3,
+Sensors,Sensors,Personal Data Access,"MainActivityaccesses the user’s BodySensors and displays the accelerometer data (X, Y, and Z axes)",MainActivity,2,3,
+MediaRecorder,MediaRecoder,Personal Data Access,MainActivityuses the MediaRecorder API to record audio from the device's microphone.,MainActivity,2,3,
+ExportedActivities1,Exported Activity,Exported Component,MainActivity is exported by default. ExportedFlagActivity is exported because of the exported flag is true. IntentFilterActivity is exported because of having the intent-filter.,"MainActivity ,ExportedFlagActivity ,IntentFilterActivity ",3,3,
